@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TVApp">
         <activity
+            android:name=".RoomServiceDescription"
+            android:exported="false" />
+        <activity
             android:name=".HotelInfoAbout"
             android:exported="false" />
         <activity

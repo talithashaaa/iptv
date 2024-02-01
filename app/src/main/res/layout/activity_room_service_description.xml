@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    tools:context=".RoomServiceDescription">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="513dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".55" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".75" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".17" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".55" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        app:layout_constraintTop_toTopOf="@id/guideline_horizontal1"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_vertical1"
+        />
+
+    <TextView
+        android:id="@+id/text_hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello,"
+        android:fontFamily="@font/poppins_600"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toTopOf="@id/guideline_horizontal1"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_vertical4"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ms. Litha"
+        android:fontFamily="@font/poppins_600"
+        android:textSize="30sp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/text_hello"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_vertical4"
+        />
+
+    <TextView
+        android:id="@+id/text_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wednesday"
+        android:fontFamily="@font/poppins_600"
+        android:textSize="30sp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toTopOf="@id/guideline_horizontal1"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_vertical2"
+        />
+    <TextView
+        android:id="@+id/text_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="31 September 2024"
+        android:fontFamily="@font/poppins_600"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/text_day"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_vertical2"
+        />
+
+    <TextView
+        android:id="@+id/text_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="23:59"
+        android:fontFamily="@font/poppins_600"
+        android:textSize="60sp"
+        android:textColor="#FFFFFF"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintTop_toTopOf="@id/guideline_horizontal1"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_vertical3"
+        />
+
+    <RelativeLayout
+        android:layout_width="860dp"
+        android:layout_height="340dp"
+        app:layout_constraintTop_toBottomOf="@id/guideline_horizontal2"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_vertical1">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rectangle"
+            />
+
+        <View
+            android:layout_width="106dp"
+            android:layout_height="43dp"
+            android:background="@drawable/ribbons"
+            android:layout_marginTop="30dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="112"
+            android:fontFamily="@font/poppins_600"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="30dp"
+            android:textColor="#ffffff"
+            android:textSize="25sp"
+            />
+
+        <TextView
+            android:id="@+id/helloTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deluxe Room (Single Bed)"
+            android:fontFamily="@font/poppins_600"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="120dp"
+            android:textColor="#3B5CD3"
+            android:textSize="25sp"
+            />
+
+        <TextView
+            android:id="@+id/welcomeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This sophisticated haven boasts a spacious layout, featuring a sumptuous king-size bed adorned with premium linens and an array of pillows for an indulgent night's sleep. The room seamlessly blends modern aesthetics with timeless design, creating an inviting ambiance. Stay productive with a dedicated workspace equipped with high-speed Wi-Fi, and unwind in the opulent en-suite bathroom with a rain shower and deluxe amenities. Enjoy entertainment on the flat-screen TV, take advantage of complimentary services such as daily housekeeping and a well-stocked minibar, and savor culinary delights with the convenience of in-room dining. Some Deluxe Single Bed Rooms offer panoramic views of the cityscape, providing a captivating backdrop to your stay."
+            android:fontFamily="@font/poppins_600"
+            android:layout_below="@+id/helloTextView"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="400dp"
+            android:textColor="#3B5CD3"
+            android:textSize="11sp"
+            />
+        <Button
+            android:id="@+id/welcomeButton"
+            android:layout_marginTop="10dp"
+            android:layout_width="93dp"
+            android:layout_height="27dp"
+            android:layout_marginLeft="30dp"
+            android:layout_below="@+id/welcomeTextView"
+            android:fontFamily="@font/poppins_600"
+            android:background="@drawable/button_background"
+            android:radius="20dp"
+            android:text="Our Services"
+            android:textSize="8sp"
+            android:textColor="#FFFFFF" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="470dp"
+            app:cardCornerRadius="20dp">
+
+            <ImageView
+                android:id="@+id/wifi"
+                android:layout_width="639dp"
+                android:layout_height="340dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/hotel" />
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
