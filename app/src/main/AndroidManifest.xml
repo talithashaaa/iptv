@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-feature
         android:name="android.software.leanback"
@@ -8,18 +9,31 @@
         android:name="android.hardware.touchscreen"
         android:required="false" />
 
-    <application
+    <application xmlns:tools="http://schemas.android.com/tools"
         android:allowBackup="true"
         android:banner="@mipmap/ic_launcher"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.TVApp">
+        android:theme="@style/Theme.TVApp"
+        tools:replace="android:theme">
+        <activity
+            android:name=".HotelInfoLocation"
+            android:exported="false" />
+        <activity
+            android:name=".HotelInfoAbout"
+            android:exported="false" />
+        <activity
+            android:name=".RoomServiceDetail"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
         <activity
             android:name=".RoomServiceDescription"
             android:exported="false" />
         <activity
-            android:name=".HotelInfoAbout"
+            android:name=".HotelInfo"
             android:exported="false" />
         <activity
             android:name=".SplashScreen"
