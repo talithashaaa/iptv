@@ -18,6 +18,12 @@
         android:theme="@style/Theme.TVApp"
         tools:replace="android:theme">
         <activity
+            android:name=".HotelFacility"
+            android:exported="false" />
+        <activity
+            android:name=".HotelInfoFacility"
+            android:exported="false" />
+        <activity
             android:name=".HotelInfoLocation"
             android:exported="false" />
         <activity
