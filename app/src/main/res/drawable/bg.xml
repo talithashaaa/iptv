@@ -17,8 +17,7 @@
     <item android:top="10px">
         <shape android:shape="rectangle">
             <corners
-                android:topLeftRadius="20dp"
-                android:topRightRadius="20dp"
+
                 android:bottomRightRadius="20dp"
                 android:bottomLeftRadius="20dp" />
             <gradient

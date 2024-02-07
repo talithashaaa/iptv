@@ -18,6 +18,9 @@
         android:theme="@style/Theme.TVApp"
         tools:replace="android:theme">
         <activity
+            android:name=".OrderFoodPayment"
+            android:exported="false" />
+        <activity
             android:name=".OrderFood"
             android:exported="false" />
         <activity
