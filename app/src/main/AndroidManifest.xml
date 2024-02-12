@@ -18,6 +18,9 @@
         android:theme="@style/Theme.TVApp"
         tools:replace="android:theme">
         <activity
+            android:name=".MainMenu"
+            android:exported="false" />
+        <activity
             android:name=".OrderFoodPayment"
             android:exported="false" />
         <activity
@@ -46,15 +49,21 @@
             android:exported="false" />
         <activity
             android:name=".SplashScreen"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:theme="@style/Theme.AppCompat"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="false">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />-->
+<!--            </intent-filter>-->
         </activity>
     </application>
 

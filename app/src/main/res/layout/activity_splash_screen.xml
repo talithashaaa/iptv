@@ -12,14 +12,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".1" />
+        app:layout_constraintGuide_end="513dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_horizontal2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".3" />
+        app:layout_constraintGuide_percent=".26" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_vertical1"
@@ -40,14 +40,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent=".53" />
+        app:layout_constraintGuide_percent=".55" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_vertical4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent=".76" />
+        app:layout_constraintGuide_percent=".7" />
 
     <ImageView
         android:id="@+id/logo"
@@ -62,7 +62,7 @@
         android:id="@+id/text_day"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Wednesday"
+        android:text="Day"
         android:fontFamily="@font/poppins_600"
         android:textSize="35sp"
         android:textColor="#FFFFFF"
@@ -75,17 +75,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_600"
-        android:text="31 September 2024"
+        android:text="Date"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintLeft_toLeftOf="@id/guideline_vertical3"
         app:layout_constraintTop_toBottomOf="@id/text_day" />
 
-    <TextView
+    <TextClock
         android:id="@+id/text_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="23:59"
+        android:text="Time"
         android:fontFamily="@font/poppins_600"
         android:textSize="60sp"
         android:textColor="#FFFFFF"

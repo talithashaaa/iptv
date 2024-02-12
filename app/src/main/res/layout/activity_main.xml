@@ -33,14 +33,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent=".6" />
+        app:layout_constraintGuide_percent=".55" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_vertical3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent=".8" />
+        app:layout_constraintGuide_percent=".7" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_vertical1"
@@ -71,7 +71,7 @@
         android:id="@+id/text_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="31 September 2024"
+        android:text="Date"
         android:fontFamily="@font/poppins_600"
         android:textSize="20sp"
         android:textColor="#FFFFFF"
@@ -79,11 +79,11 @@
     app:layout_constraintLeft_toLeftOf="@id/guideline_vertical2"
     />
 
-    <TextView
+    <TextClock
         android:id="@+id/text_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="23:59"
+        android:text="Time"
         android:fontFamily="@font/poppins_600"
         android:textSize="60sp"
         android:textColor="#FFFFFF"
@@ -160,14 +160,14 @@
 
     </RelativeLayout>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_width="match_parent"
-        android:layout_height="125dp"
-        android:layout_marginBottom="40dp"
-        android:background="#ffffff"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:menu="@menu/bottom_menu"/>
-
+<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="125dp"-->
+<!--        android:layout_marginBottom="40dp"-->
+<!--        android:theme="@style/Theme.AppCompat"-->
+<!--        android:background="#ffffff"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:menu="@menu/bottom_menu"/>-->
 </androidx.constraintlayout.widget.ConstraintLayout>
