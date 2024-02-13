@@ -40,14 +40,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent=".55" />
+        app:layout_constraintGuide_percent=".5" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_vertical4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent=".7" />
+        app:layout_constraintGuide_percent=".68" />
 
     <ImageView
         android:id="@+id/logo"
@@ -152,6 +152,16 @@
             android:text="Home"
             android:textSize="20sp"
             android:textColor="#FFFFFF" />
+
+        <ImageView
+            android:scaleType="centerCrop"
+
+            android:layout_width="300dp"
+            android:layout_height="130dp"
+            android:src="@drawable/splashb"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            />
     </RelativeLayout>
 
 

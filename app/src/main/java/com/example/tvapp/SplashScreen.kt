@@ -13,13 +13,14 @@ import java.util.Locale
 import java.util.TimeZone
 
 class SplashScreen : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
 
         supportActionBar?.hide()
 
-        setTitle("Date & Time");
+//        setTitle("Date & Time");
 
         val calendar = Calendar.getInstance(TimeZone.getTimeZone("Asia/Jakarta"))
         val dateFormat = DateFormat.getDateInstance().format(calendar.time)
@@ -42,13 +43,19 @@ class SplashScreen : AppCompatActivity() {
     override fun dispatchKeyEvent(event: KeyEvent): Boolean {
         if (event.action == KeyEvent.ACTION_DOWN) {
             when (event.keyCode) {
-                KeyEvent.KEYCODE_DPAD_CENTER, KeyEvent.KEYCODE_ENTER -> {
-                    navigateToMainActivity()
+                KeyEvent.KEYCODE_DPAD_DOWN, KeyEvent.KEYCODE_DPAD_UP,
+                KeyEvent.KEYCODE_DPAD_LEFT, KeyEvent.KEYCODE_DPAD_RIGHT -> {
+                    val welcomeButton = findViewById<Button>(R.id.welcomeButton)
+                    welcomeButton.requestFocus()
+                    welcomeButton.scaleX = 1.2f
+                    welcomeButton.scaleY = 1.2f
                     return true
                 }
-                KeyEvent.KEYCODE_DPAD_LEFT, KeyEvent.KEYCODE_DPAD_RIGHT,
-                KeyEvent.KEYCODE_DPAD_UP, KeyEvent.KEYCODE_DPAD_DOWN -> {
-                    return true
+                KeyEvent.KEYCODE_ENTER -> {
+                    if (currentFocus == findViewById<Button>(R.id.welcomeButton)) {
+                        navigateToMainActivity()
+                        return true
+                    }
                 }
             }
         }
@@ -59,6 +66,5 @@ class SplashScreen : AppCompatActivity() {
     private fun navigateToMainActivity() {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
-        finish()
     }
 }
