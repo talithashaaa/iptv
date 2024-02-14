@@ -25,7 +25,8 @@
             android:exported="false" />
         <activity
             android:name=".OrderFood"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat"/>
         <activity
             android:name=".HotelFacility"
             android:exported="false" />
@@ -37,7 +38,8 @@
             android:exported="false" />
         <activity
             android:name=".HotelInfoAbout"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat"/>
         <activity
             android:name=".RoomServiceDetail"
             android:exported="false" />
@@ -46,7 +48,8 @@
             android:exported="false" />
         <activity
             android:name=".HotelInfo"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat"/>
         <activity
             android:name=".SplashScreen"
             android:theme="@style/Theme.AppCompat"

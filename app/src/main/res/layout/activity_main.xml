@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent=".55" />
+        app:layout_constraintGuide_percent=".5" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_vertical3"
@@ -165,10 +165,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_gravity="bottom"
+        android:layout_gravity="center"
         android:layout_marginBottom="40dp"
         android:background="#FFFFFF"
-        android:padding="16dp"
+        android:padding="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -178,6 +178,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:focusable="true"
+            android:layout_centerVertical="true"
             android:gravity="center">
 
             <ImageView
@@ -201,6 +202,7 @@
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/orderButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -226,6 +228,7 @@
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/roomButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -251,6 +254,7 @@
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/musicButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -276,6 +280,7 @@
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/infoButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -302,6 +307,7 @@
 
 
         <RelativeLayout
+            android:id="@+id/youtubeButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -328,6 +334,7 @@
 
 
         <RelativeLayout
+            android:id="@+id/netflixButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"

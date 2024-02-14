@@ -7,5 +7,6 @@ class HotelInfoAbout : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hotel_info_about)
+        supportActionBar?.hide()
     }
 }
