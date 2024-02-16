@@ -1,12 +1,15 @@
 package com.example.tvapp
 
 //import androidx.appcompat.app.AppCompatActivity
+import android.content.ActivityNotFoundException
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.KeyEvent
 import android.widget.Button
 import android.widget.RelativeLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.FragmentActivity
 import java.text.DateFormat
 import java.text.SimpleDateFormat
@@ -42,7 +45,7 @@ class MainActivity : FragmentActivity() {
 
         channelButton = findViewById(R.id.channelButton)
         channelButton.setOnClickListener {
-            navigateToHotelInfo()
+            navigateToHotelInfoAbout()
         }
 
         orderButton = findViewById(R.id.orderButton)
@@ -52,14 +55,12 @@ class MainActivity : FragmentActivity() {
 
         roomButton = findViewById(R.id.roomButton)
         roomButton.setOnClickListener {
-            val intent = Intent(this, HotelInfo::class.java)
-            startActivity(intent)
+            navigateToHotelService()
         }
 
         musicButton = findViewById(R.id.musicButton)
         musicButton.setOnClickListener {
-            val intent = Intent(this, HotelInfo::class.java)
-            startActivity(intent)
+            openSpotify()
         }
 
         infoButton = findViewById(R.id.infoButton)
@@ -70,14 +71,12 @@ class MainActivity : FragmentActivity() {
 
         youtubeButton = findViewById(R.id.youtubeButton)
         youtubeButton.setOnClickListener {
-            val intent = Intent(this, HotelInfo::class.java)
-            startActivity(intent)
+            openYoutube()
         }
 
         netflixButton = findViewById(R.id.netflixButton)
         netflixButton.setOnClickListener {
-            val intent = Intent(this, HotelInfo::class.java)
-            startActivity(intent)
+            openNetflix()
         }
     }
 
@@ -243,10 +242,22 @@ class MainActivity : FragmentActivity() {
             }
             KeyEvent.KEYCODE_ENTER, KeyEvent.KEYCODE_DPAD_CENTER -> {
                 if (channelButton.isFocused) {
-                    navigateToHotelInfo()
+                    navigateToHotelInfoAbout()
                     return true
                 } else if (orderButton.isFocused) {
                     navigateToOrderFood()
+                    return true
+                } else if (roomButton.isFocused) {
+                    navigateToHotelService()
+                    return true
+                } else if (musicButton.isFocused) {
+                    openSpotify()
+                    return true
+                } else if (youtubeButton.isFocused) {
+                    openYoutube()
+                    return true
+                } else if (netflixButton.isFocused) {
+                    openNetflix()
                     return true
                 }
             }
@@ -259,8 +270,8 @@ class MainActivity : FragmentActivity() {
         finish()
     }
 
-    private fun navigateToHotelInfo() {
-        val intent = Intent(this, HotelInfo::class.java)
+    private fun navigateToHotelInfoAbout() {
+        val intent = Intent(this, HotelInfoAbout::class.java)
         startActivity(intent)
     }
 
@@ -268,4 +279,43 @@ class MainActivity : FragmentActivity() {
         val intent = Intent(this, OrderFood::class.java)
         startActivity(intent)
     }
+
+    private fun navigateToHotelService() {
+        val intent = Intent(this, RoomServiceDescription::class.java)
+        startActivity(intent)
+    }
+
+    private fun openSpotify() {
+        val spotifyUri = Uri.parse("https://www.spotify.com")
+
+        val intent = Intent(Intent.ACTION_VIEW, spotifyUri)
+        try {
+            startActivity(intent)
+        } catch (e: ActivityNotFoundException) {
+            Toast.makeText(this, "Spotify Not Found", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun openYoutube() {
+        val youtubeUri = Uri.parse("https://www.youtube.com")
+
+        val intent = Intent(Intent.ACTION_VIEW, youtubeUri)
+        try {
+            startActivity(intent)
+        } catch (e: ActivityNotFoundException) {
+            Toast.makeText(this, "Youtube Not Found", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun openNetflix() {
+        val netflixUri = Uri.parse("https://www.netflix.com")
+
+        val intent = Intent(Intent.ACTION_VIEW, netflixUri)
+        try {
+            startActivity(intent)
+        } catch (e: ActivityNotFoundException) {
+            Toast.makeText(this, "Netflix Not Found", Toast.LENGTH_SHORT).show()
+        }
+    }
+
 }

@@ -47,7 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent=".7" />
+        app:layout_constraintGuide_percent=".63" />
 
     <ImageView
         android:id="@+id/logo"
@@ -62,23 +62,27 @@
         android:id="@+id/text_day"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Day"
         android:fontFamily="@font/poppins_600"
-        android:textSize="30sp"
+        android:text="Day"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:textAlignment="viewStart"
         android:textColor="#FFFFFF"
-        app:layout_constraintTop_toTopOf="@id/guideline_horizontal1"
-        app:layout_constraintLeft_toLeftOf="@id/guideline_vertical3"
-        />
+        android:textSize="25sp"
+        app:layout_constraintRight_toLeftOf="@id/guideline_vertical4"
+        app:layout_constraintTop_toTopOf="@id/guideline_horizontal1" />
 
     <TextView
         android:id="@+id/text_date"
+        android:layout_marginRight="10dp"
+        android:textAlignment="viewStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_600"
         android:text="Date"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
-        app:layout_constraintLeft_toLeftOf="@id/guideline_vertical3"
+        app:layout_constraintRight_toLeftOf="@id/guideline_vertical4"
         app:layout_constraintTop_toBottomOf="@id/text_day" />
 
     <TextClock
@@ -87,7 +91,7 @@
         android:layout_height="wrap_content"
         android:text="Time"
         android:fontFamily="@font/poppins_600"
-        android:textSize="60sp"
+        android:textSize="70sp"
         android:textColor="#FFFFFF"
         android:layout_marginLeft="10dp"
         app:layout_constraintTop_toTopOf="@id/guideline_horizontal1"
