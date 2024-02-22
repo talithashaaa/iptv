@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="#ffffff"
+    app:cardCornerRadius="20dp"
+    android:id="@+id/cardView"
+    android:padding="5dp"
+    android:layout_margin="8dp">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+        
+        <ImageView
+            android:id="@+id/rvfacilityimg"
+            android:scaleType="centerCrop"
+            android:src="@drawable/gym"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+        
+        <TextView
+            android:id="@+id/rvfacilitytitle"
+            android:text="Gym"
+            android:textColor="#3b5cd3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:fontFamily="@font/poppins_600"
+        />
+
+        <!--                <TextView-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="match_parent"-->
+        <!--                    android:layout_below="@+id/restaurant"-->
+        <!--                    android:layout_centerInParent="true"-->
+        <!--                    android:fontFamily="@font/poppins_600"-->
+        <!--                    android:gravity="center"-->
+        <!--                    android:text="Restaurant"-->
+        <!--                    android:textColor="#3b5cd3"-->
+        <!--                    android:textSize="25sp" />-->
+        
+        
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

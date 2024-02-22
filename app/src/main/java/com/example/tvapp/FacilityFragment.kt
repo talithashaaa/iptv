@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -17,9 +19,12 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class FacilityFragment : Fragment() {
-    // TODO: Rename and change types of parameters
+
     private var param1: String? = null
     private var param2: String? = null
+    private var recyclerView: RecyclerView? = null
+    private var recyclerViewFacilityAdapter: RecyclerViewFacilityAdapter? = null
+    private var facilityList: MutableList<Facility> = mutableListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,19 +39,46 @@ class FacilityFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_facility, container, false)
+        val view = inflater.inflate(R.layout.fragment_facility, container, false)
+
+        facilityList = ArrayList()
+
+        recyclerView = view.findViewById<View>(R.id.rvfacility) as RecyclerView
+        recyclerViewFacilityAdapter = RecyclerViewFacilityAdapter(this, facilityList)
+
+        val layoutManager: RecyclerView.LayoutManager = GridLayoutManager(requireContext(), 3)
+
+        recyclerView!!.layoutManager = layoutManager
+        recyclerView!!.adapter = recyclerViewFacilityAdapter
+
+        prepareFacilityListData()
+
+        return view
+    }
+
+    private fun prepareFacilityListData() {
+        var facility = Facility("Gym", R.drawable.gym)
+        facilityList.add(facility)
+        facility = Facility("Restaurant", R.drawable.gym)
+        facilityList.add(facility)
+        facility = Facility("Bar", R.drawable.gym)
+        facilityList.add(facility)
+        facility = Facility("Pool", R.drawable.gym)
+        facilityList.add(facility)
+        facility = Facility("Working Space", R.drawable.gym)
+        facilityList.add(facility)
+        facility = Facility("Rooftop", R.drawable.gym)
+        facilityList.add(facility)
+        facility = Facility("BBQ Night", R.drawable.gym)
+        facilityList.add(facility)
+        facility = Facility("Spa", R.drawable.gym)
+        facilityList.add(facility)
+
+        // Notify the adapter that the data has changed
+        recyclerViewFacilityAdapter?.notifyDataSetChanged()
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment FacilityFragment.
-         */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
             FacilityFragment().apply {
@@ -57,3 +89,11 @@ class FacilityFragment : Fragment() {
             }
     }
 }
+
+
+
+//Expecting ','
+//Type mismatch: inferred type is FacilityFragment but Context! was expected
+//There should be no space or comments before '@' in label reference
+//Unresolved reference: VIew
+//Unresolved reference: findViewById
